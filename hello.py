@@ -7,4 +7,5 @@ logging.basicConfig(level=logging.DEBUG)
 @app.route("/")
 def hello():
   logging.debug("saying hello")
-  return "Hello Dreamforce"
+  name = os.environ.get("NAME", "Samuel")
+  return "Hello %s" %name
